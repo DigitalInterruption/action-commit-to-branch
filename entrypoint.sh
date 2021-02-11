@@ -19,14 +19,9 @@ git_setup
 git remote update
 git fetch --all
 
-git stash
-
 git push origin --delete -f "${INPUT_BRANCH}"
-git branch -d -r "${INPUT_BRANCH}"
 
 git checkout -b "${INPUT_BRANCH}"
-
-git stash pop
 
 git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
