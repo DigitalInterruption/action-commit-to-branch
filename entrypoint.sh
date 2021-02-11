@@ -19,7 +19,7 @@ git_setup
 git remote update
 git fetch --all
 
-git switch -C document
+git switch -C "${INPUT_BRANCH}"
 
 git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
