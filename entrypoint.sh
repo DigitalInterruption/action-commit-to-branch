@@ -18,8 +18,13 @@ EOF
 git_setup
 git remote update
 git fetch --all
-git --help
-git switch -C "${INPUT_BRANCH}"
+
+git stash
+
+git branch -D "${INPUT_BRANCH}"
+git checkout -b "${INPUT_BRANCH}"
+
+git stash pop
 
 git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
