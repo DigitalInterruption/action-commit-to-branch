@@ -21,7 +21,9 @@ git fetch --all
 
 git stash
 
-git branch -D "${INPUT_BRANCH}"
+git push origin --delete -f "${INPUT_BRANCH}"
+git branch -d -r "${INPUT_BRANCH}"
+
 git checkout -b "${INPUT_BRANCH}"
 
 git stash pop
