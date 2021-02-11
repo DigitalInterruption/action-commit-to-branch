@@ -18,7 +18,7 @@ EOF
 git_setup
 git remote update
 git fetch --all
-
+git --help
 git switch -C "${INPUT_BRANCH}"
 
 git add .
